@@ -22,15 +22,16 @@ jobs:
       uses: actions/checkout@master
       
     - name: Show some info and switch branch
-    - run: uname -a
-    - run: pwd
-    - run: ls -la
-    - run: git branch -a
-    - run: git fetch origin main
-    - run: git branch -a
-    - run: git config user.name bot
-    - run: git config user.email bot@github.bot.none
-    - run: git config --list
+      run: |
+        uname -a
+        pwd
+        ls -la
+        git branch -a
+        git fetch origin main
+        git branch -a
+        git config user.name bot
+        git config user.email bot@github.bot.none
+        git config --list
 
       
     - name: Run the bash
