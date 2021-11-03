@@ -25,11 +25,7 @@ jobs:
         run: echo "This is echo in first job first step"
 
       - name: First job's second step -- show some info
-        run: uname -a
-        run: pwd
         run: ls -la
-        run: git branch -a
-        run: chmod a+x *.sh
         
       - name: First job's 3rd step -- run bash
         run: bash fetch-opencc.sh
