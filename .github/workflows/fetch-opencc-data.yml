@@ -24,6 +24,7 @@ jobs:
     - name: Show some info and switch branch
       run: |
         uname -a
+        cat /etc/os-release
         pwd
         ls -la
         git branch -a
@@ -32,6 +33,8 @@ jobs:
         git config user.name bot
         git config user.email bot@github.bot.none
         git config --list
+        env
+        dpkg --list
 
       
     - name: Run the bash
