@@ -1,5 +1,7 @@
 name: Sync with OpenCC
 
+on: 
+
 jobs:
   my_first_job_id:
     name: My first job
