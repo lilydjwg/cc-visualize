@@ -12,7 +12,8 @@ git branch -a
 #ls -la
 #git log
 sha1sum opencc-data/TSCharacters.txt
-wget https://raw.githubusercontent.com/BYVoid/OpenCC/master/data/dictionary/TSCharacters.txt -O opencc-data/TSCharacters.txt
+#wget https://raw.githubusercontent.com/BYVoid/OpenCC/master/data/dictionary/TSCharacters.txt -O opencc-data/TSCharacters.txt
+curl https://raw.githubusercontent.com/BYVoid/OpenCC/master/data/dictionary/TSCharacters.txt > opencc-data/TSCharacters.txt
 
 
 git config user.name bot
