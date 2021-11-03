@@ -1,6 +1,9 @@
 name: Sync with OpenCC
 
-on: 
+on:
+  schedule:
+    # * is a special character in YAML so you have to quote this string
+    - cron:  '0 4 2 * *'
 
 jobs:
   my_first_job_id:
