@@ -21,15 +21,17 @@ jobs:
       - name: Job's checkout
         uses: actions/checkout@master
         
-      - name: Show some info
+      - name: Show some info and switch branch
+      - run: uname -a
+      - run: pwd
       - run: ls -la
       - run: git branch -a
       - run: git fetch origin main
-      - run: |
-        git checkout main
-        git checkout .
-        git branch -a
-      - run: ls -la
+      - run: git branch -a
+      - run: git config user.name bot
+      - run: git config user.email bot@github.bot.none
+      - run: git config --list
+
         
       - name: Run the bash
         run: bash fetch-opencc.sh

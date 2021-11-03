@@ -5,7 +5,7 @@
 #ls -la
 #git branch -a
 #git config --list
-git fetch origin main
+#git fetch origin main
 git checkout main
 git checkout .
 git branch -a
