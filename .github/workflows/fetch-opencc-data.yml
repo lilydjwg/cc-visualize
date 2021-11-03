@@ -1,0 +1,12 @@
+name: Sync with OpenCC
+
+jobs:
+  my_first_job_id:
+    name: My first job
+    runs-on: ubuntu-latest
+    steps:
+      - name: First job's checkout master
+        uses: actions/checkout@main
+        
+      - name: First job's first steps
+        run: echo "This is echo in first job first step"
