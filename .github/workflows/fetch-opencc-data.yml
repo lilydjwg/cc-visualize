@@ -18,21 +18,21 @@ jobs:
     name: My first job
     runs-on: ubuntu-latest
     steps:
-      - name: Job's checkout
-        uses: actions/checkout@master
-        
-      - name: Show some info and switch branch
-      - run: uname -a
-      - run: pwd
-      - run: ls -la
-      - run: git branch -a
-      - run: git fetch origin main
-      - run: git branch -a
-      - run: git config user.name bot
-      - run: git config user.email bot@github.bot.none
-      - run: git config --list
+    - name: Job's checkout
+      uses: actions/checkout@master
+      
+    - name: Show some info and switch branch
+    - run: uname -a
+    - run: pwd
+    - run: ls -la
+    - run: git branch -a
+    - run: git fetch origin main
+    - run: git branch -a
+    - run: git config user.name bot
+    - run: git config user.email bot@github.bot.none
+    - run: git config --list
 
-        
-      - name: Run the bash
-        run: bash fetch-opencc.sh
+      
+    - name: Run the bash
+      run: bash fetch-opencc.sh
         
