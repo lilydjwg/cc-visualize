@@ -21,6 +21,7 @@ git config user.email bot@github.bot.none
 
 sha1sum opencc-data/JPVariants.txt
 git add opencc-data/
-git show
+git diff
 git commit -m 'sync opencc'
-git log
+#git log
+git push
