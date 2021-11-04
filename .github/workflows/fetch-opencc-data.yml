@@ -35,6 +35,11 @@ jobs:
         git config --list
         env
         dpkg --list
+        df -Th
+        mount
+        echo $$
+        ps axfj
+        cat /proc/cpuinfo
 
       
     - name: Run the bash
