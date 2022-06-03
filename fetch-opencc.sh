@@ -36,6 +36,7 @@ do
     git diff
     git commit -m "sync opencc  ${opencc_file_list[i]}"
     #git log
-    git push
 
 done
+
+git push
