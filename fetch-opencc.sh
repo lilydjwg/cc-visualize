@@ -11,17 +11,31 @@ git checkout .
 git branch -a
 #ls -la
 #git log
-sha1sum opencc-data/JPVariants.txt
-wget https://raw.githubusercontent.com/BYVoid/OpenCC/master/data/dictionary/JPVariants.txt -O opencc-data/JPVariants.txt
-#curl https://raw.githubusercontent.com/BYVoid/OpenCC/master/data/dictionary/JPVariants.txt > opencc-data/JPVariants.txt
 
 
-git config user.name bot
-git config user.email bot@github.bot.none
+opencc_file_list=(
+HKVariants.txt
+JPVariants.txt
+STCharacters.txt
+TSCharacters.txt
+TWVariants.txt
+)
 
-sha1sum opencc-data/JPVariants.txt
-git add opencc-data/
-git diff
-git commit -m 'sync opencc'
-#git log
-git push
+for ((i=0; i<${#opencc_file_list[@]}; i++ ))
+do
+    sha1sum opencc-data/${opencc_file_list[i]}
+    wget https://raw.githubusercontent.com/BYVoid/OpenCC/master/data/dictionary/${opencc_file_list[i]} -O opencc-data/${opencc_file_list[i]}
+    #curl https://raw.githubusercontent.com/BYVoid/OpenCC/master/data/dictionary/${opencc_file_list[i]} > opencc-data/${opencc_file_list[i]}
+
+
+    git config user.name bot
+    git config user.email bot@github.bot.none
+
+    sha1sum opencc-data/${opencc_file_list[i]}
+    git add opencc-data/${opencc_file_list[i]}
+    git diff
+    git commit -m "sync opencc  ${opencc_file_list[i]}"
+    #git log
+    git push
+
+done
