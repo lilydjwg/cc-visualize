@@ -39,4 +39,9 @@ do
 
 done
 
+cd opencc-data
+node pre.js
+git add opencc-data*.js
+git commit -m "run opencc pre.js"
+
 git push

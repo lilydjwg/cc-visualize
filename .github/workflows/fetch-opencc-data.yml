@@ -40,7 +40,11 @@ jobs:
         echo $$
         ps axfj
         cat /proc/cpuinfo
-
+        
+      - name: Setup node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
       
     - name: Run the bash
       run: bash fetch-opencc.sh
